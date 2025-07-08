@@ -15,9 +15,6 @@ const SectionThree = () => {
       <span className="text-white text-[2rem] font-bold">
         Projects That Define the <span className="text-[#DE3101]">Future</span>
       </span>
-      <span className="text-white text-[2rem] font-bold">
-        Projects That Define the <span className="text-[#DE3101]">Future</span>
-      </span>
       <ImageSlider images={images} />
     </div>
   );
