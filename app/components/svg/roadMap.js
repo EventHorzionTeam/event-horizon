@@ -31,28 +31,28 @@ const WaveRoadmap = (props) => (
 
       {/* Boxes + Text */}
       <WaveLabelBoxSvg
-        x={-4.2 * 1.7 + 10.5 - 3}
+        x={-3.8 * 1.7 + 10.5 - 3}
         y={-7}
         title="IDEATION"
         IconComponent={BoltIconSVG}
         description="We brainstorm and research to shape your bold ideas into actionable concepts."
       />
       <WaveLabelBoxSvg
-        x={1.7 * 1.7 + 10.5 - 3}
+        x={2 * 1.7 + 10.5 - 3}
         y={-7}
         title="WIREFRAME"
         IconComponent={SettingsIconSVG}
         description="Turning ideas into wireframes and high-fidelity designs using Figma."
       />
       <WaveLabelBoxSvg
-        x={-1.2 * 1.7 + 10.5 - 3}
+        x={-0.9 * 1.7 + 10.5 - 3}
         y={4}
         title="DEVELOPMENT"
         IconComponent={PencilIconSVG}
         description="We code and integrate your product using scalable technologies."
       />
       <WaveLabelBoxSvg
-        x={4.7 * 1.7 + 10.5 - 3}
+        x={5 * 1.7 + 10.5 - 3}
         y={4}
         title="TESTING/QA"
         IconComponent={AdjustmentsIconSVG}

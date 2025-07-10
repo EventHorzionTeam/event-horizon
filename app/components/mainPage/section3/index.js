@@ -3,19 +3,24 @@ import ImageSlider from "@/app/components/mainPage/section3/imageSlider";
 
 const SectionThree = () => {
   const images = [
-    "/Slider/1.jpg",
-    "/Slider/2.jpg",
-    "/Slider/3.jpg",
-    "/Slider/4.jpg",
-    "/Slider/5.jpg",
+    "/Slider/1.jfif",
+    "/Slider/2.jfif",
+    "/Slider/3.jfif",
+    "/Slider/4.jfif",
+    "/Slider/5.jfif",
   ];
+
+  const labels = ["Cassie", "Electra", "Nionis", "Syrene", "Persik"];
 
   return (
     <div className="flex flex-col items-center py-[5rem] w-full h-full">
-      <span className="text-white text-[2rem] font-bold">
-        Projects That Define the <span className="text-[#DE3101]">Future</span>
-      </span>
-      <ImageSlider images={images} />
+      <div className="mb-[-5rem] z-46">
+        <span className="text-white text-[2.125rem] font-bold mt-[-5rem]">
+          Projects That Define the{" "}
+          <span className="text-[#DE3101]">Future</span>
+        </span>
+      </div>
+      <ImageSlider images={images} slideLabels={labels} />
     </div>
   );
 };

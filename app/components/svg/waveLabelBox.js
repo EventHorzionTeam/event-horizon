@@ -31,7 +31,7 @@ export default function WaveLabelBoxSvg({
         x={textX}
         y={titleY}
         fill="#ff3c00"
-        fontSize="0.4"
+        fontSize="0.3"
         fontWeight="bold"
         textAnchor="middle"
       >
@@ -45,7 +45,7 @@ export default function WaveLabelBoxSvg({
         </g>
       )}
 
-      <text x={textX} y={descY} fill="#ccc" fontSize="0.3" textAnchor="middle">
+      <text x={textX} y={descY} fill="#ccc" fontSize="0.2" textAnchor="middle">
         {description
           .split(" ")
           .reduce(
