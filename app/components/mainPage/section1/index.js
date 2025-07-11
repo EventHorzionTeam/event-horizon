@@ -1,6 +1,8 @@
 import React from "react";
+import {useTranslations} from 'next-intl'
 
 const SectionOne = () => {
+  const t = useTranslations('HomePage')
   return (
     <div
       className="w-full h-[100vh] flex bg-black"
@@ -16,10 +18,10 @@ const SectionOne = () => {
         <div className="flex flex-col justify-around">
           <div className="flex flex-col">
             <h1 className="text-[#DE3101] text-700 text-[4rem]/[3rem]">
-              BEYOND
+              {t('title')}
             </h1>
             <p className="ml-[6.5rem] text-[1rem]">
-              The Event Horizon: Build The Future
+              {t('about')}
             </p>
             <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" />
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/logo/EHTLogo.svg";
+import { Link } from "@/i18n/navigation";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
       />
       <div className="flex justify-center gap-x-[2rem]">
         <p className="border-b-2 border-[#DE3101]">Home</p>
-        <p>About</p>
+        <Link href="/">About</Link>
         <p>Roadmap</p>
         <p>Contact</p>
       </div>
