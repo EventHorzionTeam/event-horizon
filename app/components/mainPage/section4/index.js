@@ -33,7 +33,7 @@ const SectionFour = () => {
           placeholder="Message"
           className="bg-black py-[1.5rem] px-[1rem] rounded-[1rem] min-h-[10rem]"
         />
-        <button className="border-2 border-black rounded-[0.5rem] text-black w-[50%] py-[0.25rem] px-[1rem] shadow-lg">
+        <button className="border-2 border-black rounded-[1rem] text-[#DE3101] w-[25%] py-[0.25rem] px-[1rem] shadow-lg cursor-pointer">
           Submit
         </button>
       </div>
