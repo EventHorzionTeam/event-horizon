@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Logo from "@/public/logo/EHTLogo.svg";
 import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "./languageSwitcher";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,21 +17,8 @@ const Header = () => {
         height={80}
         className="text-white"
       />
-      {/* Hamburger icon for xs only */}
-      <button
-        className="xs:hidden flex flex-col justify-center items-center w-10 h-10 text-[#DE3101] focus:outline-none"
-        onClick={() => setSidebarOpen(true)}
-        aria-label="Open menu"
-      >
-        <span className="block w-6 h-0.5 bg-[#DE3101] mb-1 rounded"></span>
-        <span className="block w-6 h-0.5 bg-[#DE3101] mb-1 rounded"></span>
-        <span className="block w-6 h-0.5 bg-[#DE3101] rounded"></span>
-      </button>
-      {/* Horizontal menu for sm and up */}
-      <div className="hidden xs:flex justify-center gap-x-[2rem] items-center">
-        <button className="px-4 py-2 bg-gradient-to-r from-[#DE3101] to-[#FF6B35] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-[#DE3101]/20 hover:border-[#DE3101]/40 cursor-pointer">
-          EN | TR
-        </button>
+      <div className="flex justify-center gap-x-[2rem] items-center">
+        <LanguageSwitcher />
         <button className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group">
           <svg
             className="w-5 h-5 text-white group-hover:text-yellow-300 transition-colors duration-300"
@@ -106,7 +94,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// Add this to your globals.css for the sidebar animation:
-// @keyframes slide-in-left { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-// .animate-slide-in-left { animation: slide-in-left 0.3s ease; }
