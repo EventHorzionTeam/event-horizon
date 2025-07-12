@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --screens-xs: 320px;
+  --screens-sm: 501px;
+  --screens-md: 771px;
+  --screens-lg: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
