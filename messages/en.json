@@ -1,6 +1,29 @@
 {
-    "HomePage": {
+    "MainPage": {
+      "section1": {
       "title": "BEYOND",
-      "about": "The Event Horizon: Build The Future"
+      "subtitle": "The Event Horizon: Build The Future",
+      "info": "Event Horizon Tech is your gateway to turning bold ideas into scalable applications and startups",
+      "about": "We provide the tools, frameworks, and expertise to help innovators cross the threshold from concept to reality.",
+      "button": "Get Started"
+      },
+      "section2": {
+        "title": "The Future We’re Building ",
+        "subtitle": "TOGETHER",
+        "title2": "IDEATION",
+        "desc1": "We brainstorm and research to shape your bold ideas into actionable concepts.",
+        "title3": "WIREFRAME",
+        "desc2": "Turning ideas into wireframes and high-fidelity designs using Figma.",
+        "title4": "DEVELOPMENT",
+        "desc3": "We code and integrate your product using scalable technologies.",
+        "title5": "TESTING/QA",
+        "desc4": "Each line of code is tested for quality, security and performance."
+        
+      },
+      "section3": {
+        "title": "Projects That Define the",
+        "subtitle": "FUTURE"
+
+      }
     }
   }

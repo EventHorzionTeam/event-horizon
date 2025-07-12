@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 const SectionOne = () => {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("MainPage");
   return (
     <div
       className="w-full h-[100vh] flex bg-black"
@@ -18,9 +18,9 @@ const SectionOne = () => {
         <div className="flex flex-col justify-around">
           <div className="flex flex-col">
             <h1 className="text-[#DE3101] text-700 text-[4rem]/[3rem]">
-              {t("title")}
+              {t("section1.title")}
             </h1>
-            <p className="ml-[6.5rem] text-[1rem]">{t("about")}</p>
+            <p className="ml-[6.5rem] text-[1rem]">{t("section1.subtitle")}</p>
             <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" />
           </div>
           <div className="flex flex-col max-w-[25rem]">

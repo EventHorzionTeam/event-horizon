@@ -1,6 +1,9 @@
 {
-    "HomePage": {
+    "MainPage": {
+      "section1": {
       "title": "ÖTE",
       "about": "Olay Ufku: Geleceği İnşa Et"
+      }
+
     }
   }
