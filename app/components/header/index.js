@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/logo/EHTLogo.svg";
 import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "./languageSwitcher";
 
 const Header = () => {
   return (
@@ -14,9 +16,7 @@ const Header = () => {
         className="text-white"
       />
       <div className="flex justify-center gap-x-[2rem] items-center">
-        <button className="px-4 py-2 bg-gradient-to-r from-[#DE3101] to-[#FF6B35] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-[#DE3101]/20 hover:border-[#DE3101]/40 cursor-pointer">
-          EN | TR
-        </button>
+        <LanguageSwitcher />
         <button className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group">
           <svg
             className="w-5 h-5 text-white group-hover:text-yellow-300 transition-colors duration-300"
@@ -42,3 +42,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
