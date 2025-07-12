@@ -3,9 +3,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 const SectionOne = () => {
-<<<<<<< HEAD
-  const t = useTranslations("MainPage");
-=======
   const t = useTranslations("HomePage");
   const [isMdUp, setIsMdUp] = useState(true);
 
@@ -58,7 +55,6 @@ const SectionOne = () => {
       </div>
     );
   }
->>>>>>> 4358b2fce2cf1a3958c4555f15f2f09da140b514
   return (
     <div
       className="w-full h-[100vh] flex bg-black"
