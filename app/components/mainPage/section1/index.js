@@ -1,8 +1,64 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 const SectionOne = () => {
+<<<<<<< HEAD
   const t = useTranslations("MainPage");
+=======
+  const t = useTranslations("HomePage");
+  const [isMdUp, setIsMdUp] = useState(true);
+
+  useEffect(() => {
+    // Get the --screens-md value from CSS
+    const getMdBreakpoint = () => {
+      const root = window.getComputedStyle(document.documentElement);
+      const md = root.getPropertyValue("--screens-md").trim();
+      // Remove 'px' and parse as integer
+      return parseInt(md.replace("px", ""), 10);
+    };
+
+    const checkScreen = () => {
+      const md = getMdBreakpoint();
+      setIsMdUp(window.innerWidth >= md);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  if (!isMdUp) {
+    return (
+      <div
+        className="w-full mt-[5rem] px-[1rem] h-[70vh] flex flex-col justify-between bg-black"
+        style={{
+          backgroundImage: `url('/MainPage/Hero.jfif')`,
+          backgroundSize: "190%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "50% 10%",
+        }}
+      >
+        <div className="flex flex-col">
+          <h1 className="text-[#DE3101] text-700 text-[3rem]/[3rem]">
+            {t("title")}
+          </h1>
+          <p className="ml-[3.5rem] text-[1.25rem] max-w-[12rem]">
+            {t("about")}
+          </p>
+          {/* <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" /> */}
+        </div>
+        <div className="flex flex-col">
+          <div className="w-[1/3] h-[1px] bg-[#DE3101] mb-[.5rem]" />
+          <p>
+            Event Horizon Tech is your gateway to turning bold ideas into
+            scalable applications and startups
+          </p>
+        </div>
+      </div>
+    );
+  }
+>>>>>>> 4358b2fce2cf1a3958c4555f15f2f09da140b514
   return (
     <div
       className="w-full h-[100vh] flex bg-black"

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/logo/EHTLogo.svg";
@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./languageSwitcher";
 
 const Header = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-50">
       <Image
@@ -30,17 +32,65 @@ const Header = () => {
             />
           </svg>
         </button>
-        <Link href="/" className="border-b-2 border-[#DE3101]">
+        <Link
+          href="/"
+          className="border-b-2 border-[#DE3101] text-white hover:text-[#DE3101] transition-colors duration-200"
+        >
           Home
         </Link>
         <Link href="/">About</Link>
         <Link href="/">Roadmap</Link>
         <Link href="/">Contact</Link>
       </div>
+      {/* Sidebar overlay for xs */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 flex">
+          {/* Sidebar */}
+          <div className="w-2/3 max-w-xs bg-black/90 h-full flex flex-col pt-8 px-6 shadow-2xl relative animate-slide-in-left">
+            {/* Close button */}
+            <button
+              className="absolute top-4 right-4 text-[#DE3101] text-2xl focus:outline-none"
+              onClick={() => setSidebarOpen(false)}
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
+            <nav className="flex flex-col gap-6 mt-8">
+              <Link
+                href="/"
+                className="text-[#DE3101] text-lg font-semibold border-b-2 border-[#DE3101] pb-1"
+              >
+                Home
+              </Link>
+              <Link
+                href="/"
+                className="text-white text-lg hover:text-[#DE3101] transition-colors"
+              >
+                Road map
+              </Link>
+              <Link
+                href="/"
+                className="text-white text-lg hover:text-[#DE3101] transition-colors"
+              >
+                Project
+              </Link>
+              <Link
+                href="/"
+                className="text-white text-lg hover:text-[#DE3101] transition-colors"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+          {/* Overlay background */}
+          <div
+            className="flex-1 bg-black/50"
+            onClick={() => setSidebarOpen(false)}
+          />
+        </div>
+      )}
     </div>
   );
 };
 
 export default Header;
-
-
