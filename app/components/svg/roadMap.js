@@ -12,7 +12,7 @@ import { AdjustmentsIconSVG } from "./icons/adjustment";
 const WaveRoadmap = (props) => (
   <svg
     viewBox="7.5 -10 40 20"
-    className="block mx-auto min-w-[1400px] max-w-[1400px] min-h-[650px] max-h-[650px]"
+    className="block mx-auto w-full max-w-[2400px] min-h-[650px] max-h-[650px]"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g transform="translate(10.5, 0) scale(1.4)">
