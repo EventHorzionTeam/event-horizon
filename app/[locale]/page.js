@@ -7,7 +7,7 @@ export default function Home() {
     <div className="bg-black">
       <Header />
       <MainPage />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

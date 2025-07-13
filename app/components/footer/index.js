@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Footer = () => (
   <footer className="w-full bg-black px-6 py-6 border-t-2 border-b-2 border-[#DE3101]">
-    <div className="flex justify-between items-start py-6">
+    {/* Large Screen Footer (lg and above) */}
+    <div className="lg:flex hidden justify-between items-start py-6">
       {/* Column 1: Brand */}
       <div className="flex flex-col min-w-[18%]">
         <h1 className="text-[#DE3101] font-bold text-lg mb-2">
@@ -64,6 +65,65 @@ const Footer = () => (
             Get in tuch
           </Link>
         </div>
+      </div>
+    </div>
+
+    {/* Small Screen Footer (xs) */}
+    <div className="lg:hidden flex flex-col items-center gap-8 py-8 text-center">
+      {/* Brand Section */}
+      <div>
+        <h1 className="text-[#DE3101] font-bold text-2xl mb-1">
+          Event Horizon Tech
+        </h1>
+        <p className="text-[#9F9696] text-sm leading-snug max-w-[300px] mx-auto">
+          turning bold ideas scalable realities beyond the horizon
+        </p>
+      </div>
+
+      {/* Navigation Links */}
+      <h1 className="text-[#DE3101] font-semibold text-lg mb-2">Explore</h1>
+      <div className="flex flex-wrap justify-center gap-5 text-sm">
+        <Link href="/" className="text-[#9F9696] hover:text-[#DE3101]">
+          Home
+        </Link>
+        <Link href="/roadmap" className="text-[#9F9696] hover:text-[#DE3101]">
+          Road Map
+        </Link>
+        <Link href="/project" className="text-[#9F9696] hover:text-[#DE3101]">
+          Project
+        </Link>
+        <Link href="/contact" className="text-[#9F9696] hover:text-[#DE3101]">
+          Contact
+        </Link>
+      </div>
+
+      {/* Vision Section */}
+      <div>
+        <h2 className="text-[#DE3101] font-semibold text-base mb-2">Vision</h2>
+        <p className="text-[#9F9696] text-xs leading-relaxed max-w-[300px] mx-auto">
+          We’re a team of engineers, dreamers, and startup veterans who believe
+          in breaking boundaries. If you’re looking to collaborate or just say
+          hello,
+        </p>
+      </div>
+
+      {/* Stay Updated Section */}
+      <div className="w-full flex flex-col items-center gap-3">
+        <h2 className="text-[#DE3101] font-semibold text-base">Stay updated</h2>
+        <input
+          type="email"
+          placeholder="Your email"
+          className="bg-black border border-[#DE3101] text-[#9F9696] px-4 py-2 rounded-sm outline-none focus:ring-2 focus:ring-[#DE3101] w-[85%] max-w-[280px]"
+        />
+        <button className="w-[85%] max-w-[280px] bg-black border border-[#DE3101] text-[#DE3101] py-2 rounded-sm text-sm hover:bg-[#DE3101] hover:text-black transition-colors">
+          Subscribe
+        </button>
+        <Link
+          href="/contact"
+          className="text-[#DE3101] font-semibold text-sm hover:underline mt-1"
+        >
+          Get in touch
+        </Link>
       </div>
     </div>
   </footer>
