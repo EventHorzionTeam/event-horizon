@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 const SectionOne = () => {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("MainPage");
   const [isMdUp, setIsMdUp] = useState(true);
 
   useEffect(() => {
@@ -38,16 +38,16 @@ const SectionOne = () => {
       >
         <div className="flex flex-col">
           <h1 className="text-[#DE3101] text-700 text-[3rem]/[3rem]">
-            {t("title")}
+            {t("section1.title")}
           </h1>
           <p className="ml-[3.5rem] text-[1.25rem] max-w-[12rem]">
-            {t("about")}
+            {t("section1.subtitle")}
           </p>
           {/* <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" /> */}
         </div>
-        <div className="flex flex-col">
-          <div className="w-[1/3] h-[1px] bg-[#DE3101] mb-[.5rem]" />
-          <p>
+        <div className="flex flex-col mb-[5.5rem]">
+          <div className="w-2/3 h-[1px] bg-[#DE3101] mb-[.75rem]" />
+          <p className="text-[#525252]">
             Event Horizon Tech is your gateway to turning bold ideas into
             scalable applications and startups
           </p>

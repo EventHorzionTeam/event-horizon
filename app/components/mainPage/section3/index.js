@@ -14,8 +14,8 @@ const SectionThree = () => {
 
   return (
     <div className="flex flex-col items-center py-[5rem] w-full h-full">
-      <div className="mb-[-5rem] z-46">
-        <span className="text-white text-[2.125rem] font-bold mt-[-5rem]">
+      <div className="relative mb-[-5rem] z-[100]">
+        <span className="text-white xs:text-[1.25rem] md:text-[2.125rem] lg:text-[2.125rem] font-bold mt-[-5rem]">
           Projects That Define the{" "}
           <span className="text-[#DE3101]">Future</span>
         </span>

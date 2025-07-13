@@ -74,10 +74,10 @@ export default function ImageSlider({ images, slideLabels }) {
 
   return (
     <div className="relative w-full h-[800px] flex flex-col items-center justify-center bg-black overflow-hidden">
-      <div className="pointer-events-none absolute top-[-5rem] left-1/2 -translate-x-1/2 w-[90%] h-[250px] bg-black rounded-b-[50%] z-45" />
-      <div className="pointer-events-none absolute bottom-[-5rem] left-1/2 -translate-x-1/2 w-[90%] h-[250px] bg-black rounded-t-[50%] z-45" />
+      <div className="pointer-events-none absolute top-[-5rem] left-1/2 -translate-x-1/2 xs:w-[180%] lg:w-[90%] h-[250px] bg-black rounded-b-[50%] z-[95]" />
+      <div className="pointer-events-none absolute bottom-[-5rem] left-1/2 -translate-x-1/2 xs:w-[180%] lg:w-[90%] h-[250px] bg-black rounded-t-[50%] z-[95]" />
 
-      <div className="absolute bottom-[-25%] z-46 w-[500px] h-[500px] rotate-60">
+      <div className="absolute bottom-[-25%] z-[100] w-[500px] h-[500px] rotate-60">
         <svg viewBox="0 0 300 300" className="w-full h-full">
           <defs>
             <path

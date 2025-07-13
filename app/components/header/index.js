@@ -4,19 +4,16 @@ import Image from "next/image";
 import Logo from "@/public/logo/EHTLogo.svg";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./languageSwitcher";
+import { IconX } from "@tabler/icons-react";
 
 const Header = () => {
   const [isMdUp, setIsMdUp] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    const getMdBreakpoint = () => {
-      const root = window.getComputedStyle(document.documentElement);
-      const mdValue = root.getPropertyValue("--screens-md").trim();
-      return parseInt(mdValue.replace("px", ""), 10);
-    };
     const checkScreen = () => {
-      const mdBreakpoint = getMdBreakpoint();
+      // Using the breakpoint values from tailwind.config.js
+      const mdBreakpoint = 771; // md: 771px
       setIsMdUp(window.innerWidth >= mdBreakpoint);
     };
     checkScreen();
@@ -28,7 +25,7 @@ const Header = () => {
   if (!isMdUp) {
     return (
       <>
-        <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-50">
+        <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-[200]">
           <Image
             src={Logo}
             alt="EHT Logo"
@@ -58,17 +55,17 @@ const Header = () => {
         </div>
         {/* Sidebar overlay */}
         {sidebarOpen && (
-          <div className="fixed inset-0 z-50 flex justify-end">
+          <div className="fixed inset-0 z-[200] flex justify-start">
             {/* Sidebar */}
-            <div className="w-2/3 max-w-xs bg-black h-full flex flex-col pt-8 px-6 shadow-2xl relative animate-slide-in-right right-0">
-              {/* Close button inside sidebar (optional, can remove if only want in header) */}
-              {/* <button
-                className="absolute top-4 right-4 text-[#DE3101] text-2xl focus:outline-none"
+            <div className="w-full bg-black/80 h-full flex flex-col pt-8 px-6 shadow-2xl relative animate-slide-in-left left-0">
+              {/* Close button */}
+              <button
+                className="absolute top-4 right-4 text-[#DE3101] focus:outline-none"
                 onClick={() => setSidebarOpen(false)}
                 aria-label="Close menu"
               >
-                &times;
-              </button> */}
+                <IconX className="w-8 h-8" />
+              </button>
               <nav className="flex flex-col gap-6 mt-8">
                 <LanguageSwitcher />
                 <button className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group">
@@ -95,17 +92,12 @@ const Header = () => {
                 <Link href="/">Contact</Link>
               </nav>
             </div>
-            {/* Overlay background */}
-            <div
-              className="flex-1 bg-black/50"
-              onClick={() => setSidebarOpen(false)}
-            />
           </div>
         )}
         {/* Sidebar animation */}
         <style>{`
-          @keyframes slide-in-right { from { transform: translateX(100%); } to { transform: translateX(0); } }
-          .animate-slide-in-right { animation: slide-in-right 0.3s ease; }
+          @keyframes slide-in-left { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+          .animate-slide-in-left { animation: slide-in-left 0.3s ease; }
         `}</style>
       </>
     );
@@ -113,7 +105,7 @@ const Header = () => {
 
   // md and up: original header
   return (
-    <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-50">
+    <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-[200]">
       <Image
         src={Logo}
         alt="EHT Logo"
@@ -148,7 +140,7 @@ const Header = () => {
       </div>
       {/* Sidebar overlay for xs */}
       {sidebarOpen && (
-        <div className="fixed inset-0 z-50 flex">
+        <div className="fixed inset-0 z-[200] flex">
           {/* Sidebar */}
           <div className="w-2/3 max-w-xs bg-black/90 h-full flex flex-col pt-8 px-6 shadow-2xl relative animate-slide-in-left">
             {/* Close button */}
