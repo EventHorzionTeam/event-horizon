@@ -28,10 +28,10 @@ const SectionOne = () => {
   if (!isMdUp) {
     return (
       <div
-        className="w-full mt-[5rem] px-[1rem] h-[70vh] flex flex-col justify-between bg-black"
+        className="w-full mt-[5rem] px-[1rem] xs:h-[70vh] md:h-[100vh] flex flex-col justify-between bg-black xs:bg-[length:190%] md:bg-[length:100%]"
         style={{
           backgroundImage: `url('/MainPage/Hero.jfif')`,
-          backgroundSize: "190%",
+          // backgroundSize: "190%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "50% 10%",
         }}
