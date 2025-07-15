@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 // Icons
 import {
   IconSettings,
@@ -13,6 +14,7 @@ import RoadMap from "@/app/components/svg/roadMap.js";
 import useBreakpoint from "../../../hooks/useBreakpoint";
 
 const SectionTwo = () => {
+  const t = useTranslations('MainPage')
   const bp = useBreakpoint();
 
   return (
@@ -21,20 +23,19 @@ const SectionTwo = () => {
         // xs/sm: 2x2 grid roadmap matching the image
         <div className="flex flex-col items-center py-8 w-full h-[70vh] bg-black">
           <h2 className="text-white text-center font-bold tracking-widest text-[0.825rem] mb-[5rem]">
-            The Future We're Building{" "}
-            <span className="text-[#DE3101]">TOGETHER</span>
+            {t('section2.title')}{" "}
+            <span className="text-[#DE3101]">{t('section2.subtitle')}</span>
           </h2>
           <div className="grid grid-cols-2 gap-x-4 gap-y-4 w-full max-w-xs px-2">
             {/* Step 1 */}
             <div className="flex flex-col items-center">
               <div className="border-2 border-[#DE3101] rounded-2xl p-3 w-full h-[10rem] flex flex-col items-center justify-between text-center">
                 <span className="text-[#DE3101] font-bold text-[0.813rem] mb-1">
-                  IDEATION
+                  {t('section2.title2')}
                 </span>
                 <IconBolt className="text-[#DE3101] text-base mb-1" />
                 <p className="text-white text-[0.688rem] leading-snug">
-                  We brainstorm and research to shape your bold ideas into
-                  actionable concepts.
+                  {t('section2.desc1')}
                 </p>
               </div>
             </div>
@@ -42,12 +43,11 @@ const SectionTwo = () => {
             <div className="flex flex-col items-center">
               <div className="border-2 border-[#DE3101] rounded-2xl p-3 w-full h-[10rem] flex flex-col items-center justify-between text-center">
                 <span className="text-[#DE3101] font-bold text-[0.813rem] mb-1">
-                  DEVELOPMENT
+                  {t('section2.title4')}
                 </span>
                 <IconSettings className="text-[#DE3101] text-base mb-1" />{" "}
                 <p className="text-white text-[0.688rem] leading-snug">
-                  We code, integrate, and bring your product to life using
-                  scalable, reliable technologies.
+                  {t('section2.desc3')}
                 </p>
               </div>
             </div>
@@ -55,12 +55,11 @@ const SectionTwo = () => {
             <div className="flex flex-col items-center">
               <div className="border-2 border-[#DE3101] rounded-2xl p-3 w-full h-[10rem] flex flex-col items-center justify-between text-center">
                 <span className="text-[#DE3101] font-bold text-[0.813rem] mb-1">
-                  WIREFRAMES IGN
+                  {t('section2.title3')}
                 </span>
                 <IconPencil className="text-[#DE3101] text-base mb-1" />{" "}
                 <p className="text-white text-[0.688rem] leading-snug">
-                  Turning ideas into interactive wireframes and high-fidelity
-                  designs using Figma and modern UI/UX principles.
+                  {t('section2.desc2')}
                 </p>
               </div>
             </div>
@@ -68,12 +67,11 @@ const SectionTwo = () => {
             <div className="flex flex-col items-center">
               <div className="border-2 border-[#DE3101] rounded-2xl p-3 w-full h-[10rem] flex flex-col items-center justify-between text-center">
                 <span className="text-[#DE3101] font-bold text-[0.813rem] mb-1">
-                  TESTING/QA
+                  {t('section2.title5')}
                 </span>
                 <IconAdjustments className="text-[#DE3101] text-base mb-1" />{" "}
                 <p className="text-white text-[0.688rem] leading-snug">
-                  Every line of code is tested rigorously to ensure quality,
-                  security, and smooth user experience.
+                  {t('section2.desc4')}
                 </p>
               </div>
             </div>
@@ -83,8 +81,8 @@ const SectionTwo = () => {
         // md, lg, xl: Original code for larger screens
         <div className="flex flex-col items-center py-[5rem] w-full h-full">
           <span className="text-white tracking-[1rem] text-[2rem] font-bold">
-            The Future We're Building{" "}
-            <span className="text-[#DE3101]">TOGETHER</span>
+            {t('section2.title')}{" "}
+            <span className="text-[#DE3101]">{t('section2.subtitle')}</span>
           </span>
           <div className="w-full h-full pt-[5rem]">
             <RoadMap />

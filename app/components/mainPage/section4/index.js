@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const SectionFour = () => {
+  const t = useTranslations('MainPage')
   return (
     <div className="relative flex xs:flex-col-reverse xs:pb-[4rem] xs:gap-[4rem] lg:gap-[1rem] w-full items-center justify-between lg:px-[5rem] xs:px-[1rem] gap-x-12 min-h-[80vh]">
       {/* Contact Form */}
@@ -11,33 +13,33 @@ const SectionFour = () => {
         }}
       >
         <span className="text-white lg:text-[2.125rem] xs:text-[1.25rem] font-bold">
-          Contact <span className="text-black ">Us</span>
+          {t('section4.title')} <span className="text-black ">{t('section4.sub')}</span>
         </span>
 
         {/* Show inputs only on lg screens and above */}
         <div className="flex flex-col gap-[1rem] ">
           <input
             type="text"
-            placeholder="First Name"
+            placeholder={t('section4.form.name')}
             className="bg-black xs:py-[0.75rem] lg:py-[1.5rem] xs:px-[0.5rem] lg:px-[1rem] rounded-[1rem]"
           />
           <input
             type="text"
-            placeholder="Last Name"
+            placeholder={t('section4.form.surname')}
             className="bg-black xs:py-[0.75rem] lg:py-[1.5rem] xs:px-[0.5rem] lg:px-[1rem] rounded-[1rem]"
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder={t('section4.form.email')}
             className="bg-black xs:py-[0.75rem] lg:py-[1.5rem] xs:px-[0.5rem] lg:px-[1rem] rounded-[1rem]"
           />
           <textarea
             type="text"
-            placeholder="Message"
+            placeholder={t('section4.form.message')}
             className="bg-black xs:py-[0.75rem] lg:py-[1.5rem] xs:px-[0.5rem] lg:px-[1rem] rounded-[1rem] min-h-[10rem]"
           />
           <button className="border-2 border-black rounded-[1rem] text-[#DE3101] xs:w-[70%] lg:w-[25%] py-[0.25rem] px-[1rem] shadow-lg cursor-pointer">
-            Submit
+            {t('section4.form.submit')}
           </button>
         </div>
 
@@ -78,20 +80,17 @@ const SectionFour = () => {
             textOrientation: "mixed",
           }}
         >
-          Get in touch
+          {t('section4.touch')}
         </h1>
       </div>
       {/* About Us */}
       <div className="flex flex-col gap-[1rem] lg:w-[50%] xs:w-full">
         <h1 className="bg-gradient-to-r from-[#DE3101] to-[#fff] bg-clip-text text-transparent xs:text-[1.25rem] lg:text-[4rem] font-bold lg:max-w-[60%] xs:max-w-[80%]">
-          Why We Built Event Horizon Tech
+          {t('section4.eht')}
         </h1>
         <div className="w-full h-1 bg-gradient-to-r from-[#DE3101] to-[#000] max-w-[60%]" />
         <p className="xs:text-[0.813rem] lg:text-[2rem] text-[#bababa] lg:max-w-[80%] xs:max-w-[100%]">
-          We’re a team of engineers, dreamers, and startup veterans who believe
-          in breaking barriers. Event Horizon Tech was born from a shared
-          passion for empowering creators. Whether you’re looking to collaborate
-          or just say hello, we’d love to hear from you.
+          {t('section4.descr')}
         </p>
       </div>
     </div>

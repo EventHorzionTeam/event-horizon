@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslations } from "next-intl";
 
 // Components
 import WaveLabelBoxSvg from "./waveLabelBox";
@@ -9,8 +10,11 @@ import { BoltIconSVG } from "./icons/bolt";
 import { PencilIconSVG } from "./icons/pencil";
 import { AdjustmentsIconSVG } from "./icons/adjustment";
 
-const WaveRoadmap = (props) => (
-  <svg
+const WaveRoadmap = (props) => {
+  const t = useTranslations('MainPage')
+  return (
+    <>
+    <svg
     viewBox="7.5 -10 40 20"
     className="block mx-auto w-full max-w-[2400px] min-h-[650px] max-h-[650px]"
     xmlns="http://www.w3.org/2000/svg"
@@ -33,33 +37,35 @@ const WaveRoadmap = (props) => (
       <WaveLabelBoxSvg
         x={-3.8 * 1.7 + 10.5 - 3}
         y={-7}
-        title="IDEATION"
+        title={t('section2.title2')}
         IconComponent={BoltIconSVG}
-        description="We brainstorm and research to shape your bold ideas into actionable concepts."
+        description={t('section2.desc1')}
       />
       <WaveLabelBoxSvg
         x={2 * 1.7 + 10.5 - 3}
         y={-7}
-        title="WIREFRAME"
+        title={t('section2.title3')}
         IconComponent={SettingsIconSVG}
-        description="Turning ideas into wireframes and high-fidelity designs using Figma."
+        description={t('section2.desc2')}
       />
       <WaveLabelBoxSvg
         x={-0.9 * 1.7 + 10.5 - 3}
         y={4}
-        title="DEVELOPMENT"
+        title={t('section2.title4')}
         IconComponent={PencilIconSVG}
-        description="We code and integrate your product using scalable technologies."
+        description={t('section2.desc3')}
       />
       <WaveLabelBoxSvg
         x={5 * 1.7 + 10.5 - 3}
         y={4}
-        title="TESTING/QA"
+        title={t('section2.title5')}
         IconComponent={AdjustmentsIconSVG}
-        description="Each line of code is tested for quality, security and performance."
+        description={t('section2.desc4')}
       />
     </g>
   </svg>
-);
+    </>
+  )
+};
 
 export default WaveRoadmap;

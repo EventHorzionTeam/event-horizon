@@ -1,9 +1,66 @@
 {
-    "MainPage": {
-      "section1": {
-      "title": "ÖTE",
-      "about": "Olay Ufku: Geleceği İnşa Et"
-      }
-
+  "Navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "roadmap": "Yol Haritası",
+    "contact": "İletişim"
+  },
+  "MainPage": {
+    "section1": {
+      "title": "ÖTESİ",
+      "subtitle": "Etkin Ufuk: Geleceği İnşa Et",
+      "info": "Event Horizon Tech, cesur fikirleri ölçeklenebilir uygulamalara ve girişimlere dönüştürme geçidinizdir",
+      "about": "Yenilikçilerin fikirden gerçeğe geçişini sağlamak için araçlar, çerçeveler ve uzmanlık sunuyoruz.",
+      "button": "Başla"
+    },
+    "section2": {
+      "title": "Birlikte İnşa Ettiğimiz",
+      "subtitle": "GELECEK",
+      "title2": "FİKİR OLUŞTURMA",
+      "desc1": "Cesur fikirlerinizi uygulanabilir kavramlara dönüştürmek için beyin fırtınası yapıyoruz ve araştırıyoruz.",
+      "title3": "TASLAK",
+      "desc2": "Fikirleri Figma ile taslaklara ve yüksek kaliteli tasarımlara dönüştürüyoruz.",
+      "title4": "GELİŞTİRME",
+      "desc3": "Ürününüzü ölçeklenebilir teknolojilerle kodluyor ve entegre ediyoruz.",
+      "title5": "TEST/QA",
+      "desc4": "Her satır kod kalite, güvenlik ve performans açısından test edilir."
+    },
+    "section3": {
+      "title": "Geleceği Şekillendiren",
+      "subtitle": "Projeler"
+    },
+    "section4": {
+      "title": "İletişim",
+      "sub": "Kur",
+      "form": {
+        "name": "Ad",
+        "surname": "Soyad",
+        "email": "E-posta",
+        "message": "Mesaj",
+        "submit": "Gönder"
+      },
+      "touch": "Bizimle İletişime Geçin",
+      "eht": "Event Horizon Tech'i Neden Kurduk",
+      "descr": "Engelleri aşmaya inanan mühendislerden, hayalperestlerden ve girişim uzmanlarından oluşan bir ekibiz. Event Horizon Tech, yaratıcıları güçlendirme tutkusundan doğdu. İster iş birliği yapmak isteyin, ister sadece merhaba demek – sizden haber almayı çok isteriz."
     }
+  },
+  "Footer": {
+    "title": "Event Horizon Tech",
+    "descr": "cesur fikirleri ölçeklenebilir gerçekliklere dönüştürmek",
+    "sub": "ufkun ötesinde",
+    "navigation": {
+      "home": "Ana Sayfa",
+      "roadmap": "Yol Haritası",
+      "project": "Proje",
+      "contact": "İletişim"
+    },
+    "vision": "Vizyon",
+    "abouts": "Engelleri aşmaya inanan mühendislerden, hayalperestlerden ve girişim uzmanlarından oluşan bir ekibiz sınırları aşmaya inanıyoruz. İş birliği yapmak ya da sadece selam vermek istiyorsanız,",
+    "about": "Engelleri aşmaya inanan mühendislerden, hayalperestlerden ve girişim uzmanlarından oluşan bir ekibiz",
+    "about2": "sınırları aşmaya inanıyoruz.",
+    "about3": "İş birliği yapmak ya da sadece selam vermek istiyorsanız,",
+    "update": "Güncel Kalın",
+    "subscribe": "Abone Ol",
+    "touch": "Bizimle İletişime Geçin"
   }
+}

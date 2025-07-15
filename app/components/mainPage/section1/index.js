@@ -13,7 +13,7 @@ const SectionOne = () => {
         <div
           className="w-full mt-[5rem] px-[1rem] h-[70vh] flex flex-col justify-between bg-black bg-[length:190%]"
           style={{
-            backgroundImage: `url('/MainPage/Hero.jfif')`,
+            backgroundImage: `url('https://vulpine-422382743.imgix.net/Hero.jfif')`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 10%",
           }}
@@ -29,8 +29,7 @@ const SectionOne = () => {
           <div className="flex flex-col mb-[5.5rem]">
             <div className="w-2/3 h-[1px] bg-[#DE3101] mb-[.75rem]" />
             <p className="text-[#525252]">
-              Event Horizon Tech is your gateway to turning bold ideas into
-              scalable applications and startups
+              {t('section1.info')}
             </p>
           </div>
         </div>
@@ -38,7 +37,7 @@ const SectionOne = () => {
         <div
           className="w-full h-[100vh] flex bg-black bg-[length:100%]"
           style={{
-            backgroundImage: `url('/MainPage/Hero.jfif')`,
+            backgroundImage: `url('https://vulpine-422382743.imgix.net/Hero.jfif')`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
@@ -57,8 +56,7 @@ const SectionOne = () => {
               </div>
               <div className="flex flex-col max-w-[25rem]">
                 <p>
-                  We provide the tools, frameworks, and expertise to help
-                  innovators cross the threshold from concept to reality.
+                  {t('section1.about')}
                 </p>
                 <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" />
               </div>
@@ -68,14 +66,13 @@ const SectionOne = () => {
             <div className="flex flex-col justify-around">
               <div className="flex flex-col max-w-[13rem]">
                 <p>
-                  Event Horizon Tech is your gateway to turning bold ideas into
-                  scalable applications and startups
+                  {t('section1.info')}
                 </p>
                 <div className="w-full h-[1px] bg-[#DE3101] mt-[1.5rem]" />
               </div>
               <div className="flex flex-col max-w-[15rem]">
                 <button className="border-1 border-[#DE3101] text-white rounded-[1rem] py-[.5rem] cursor-pointer">
-                  Get Started
+                  {t('section1.button')}
                 </button>
               </div>
             </div>
@@ -85,7 +82,7 @@ const SectionOne = () => {
         <div
           className="w-full h-[100vh] flex bg-black bg-cover"
           style={{
-            backgroundImage: `url('/MainPage/Hero.jfif')`,
+            backgroundImage: `url('https://vulpine-422382743.imgix.net/Hero.jfif')`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
@@ -104,8 +101,7 @@ const SectionOne = () => {
               </div>
               <div className="flex flex-col max-w-[25rem]">
                 <p>
-                  We provide the tools, frameworks, and expertise to help
-                  innovators cross the threshold from concept to reality.
+                  {t('section1.about')}
                 </p>
                 <div className="w-2/3 h-[1px] bg-[#DE3101] mt-[1.5rem]" />
               </div>
@@ -115,14 +111,13 @@ const SectionOne = () => {
             <div className="flex flex-col justify-around">
               <div className="flex flex-col max-w-[13rem]">
                 <p>
-                  Event Horizon Tech is your gateway to turning bold ideas into
-                  scalable applications and startups
+                  {t('section1.info')}
                 </p>
                 <div className="w-full h-[1px] bg-[#DE3101] mt-[1.5rem]" />
               </div>
               <div className="flex flex-col max-w-[15rem]">
                 <button className="border-1 border-[#DE3101] text-white rounded-[1rem] py-[.5rem] cursor-pointer">
-                  Get Started
+                  {t('section1.button')}
                 </button>
               </div>
             </div>

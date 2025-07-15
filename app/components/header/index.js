@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/public/logo/EHTLogo.svg";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./languageSwitcher";
 import { IconX } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 
 const Header = () => {
+  const t = useTranslations("Navigation")
   const [isMdUp, setIsMdUp] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -27,7 +29,7 @@ const Header = () => {
       <>
         <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-[200]">
           <Image
-            src={Logo}
+            src='https://vulpine-422382743.imgix.net/EHTLogo.svg'
             alt="EHT Logo"
             width={60}
             height={60}
@@ -85,7 +87,7 @@ const Header = () => {
                   href="/"
                   className="border-b-2 border-[#DE3101] text-white hover:text-[#DE3101] transition-colors duration-200"
                 >
-                  Home
+                  {t("home")}
                 </Link>
                 <Link href="/">About</Link>
                 <Link href="/">Roadmap</Link>
@@ -107,7 +109,7 @@ const Header = () => {
   return (
     <div className="w-full bg-black/50 backdrop-blur-sm fixed py-[.5rem] px-[1.5rem] flex justify-between items-center z-[200]">
       <Image
-        src={Logo}
+        src='https://vulpine-422382743.imgix.net/EHTLogo.svg'
         alt="EHT Logo"
         width={80}
         height={80}
@@ -132,11 +134,11 @@ const Header = () => {
           href="/"
           className="border-b-2 border-[#DE3101] text-white hover:text-[#DE3101] transition-colors duration-200"
         >
-          Home
+          {t('home')}
         </Link>
-        <Link href="/">About</Link>
-        <Link href="/">Roadmap</Link>
-        <Link href="/">Contact</Link>
+        <Link href="/">{t('about')}</Link>
+        <Link href="/">{t('roadmap')}</Link>
+        <Link href="/">{t('contact')}</Link>
       </div>
       {/* Sidebar overlay for xs */}
       {sidebarOpen && (

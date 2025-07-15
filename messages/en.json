@@ -1,29 +1,66 @@
 {
-    "MainPage": {
-      "section1": {
-      "title": "BEYOND",
-      "subtitle": "The Event Horizon: Build The Future",
-      "info": "Event Horizon Tech is your gateway to turning bold ideas into scalable applications and startups",
-      "about": "We provide the tools, frameworks, and expertise to help innovators cross the threshold from concept to reality.",
-      "button": "Get Started"
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "roadmap": "Roadmap",
+    "contact": "Contact"
+  },
+  "MainPage": {
+    "section1": {
+    "title": "BEYOND",
+    "subtitle": "The Event Horizon: Build The Future",
+    "info": "Event Horizon Tech is your gateway to turning bold ideas into scalable applications and startups",
+    "about": "We provide the tools, frameworks, and expertise to help innovators cross the threshold from concept to reality.",
+    "button": "Get Started"
+    },
+    "section2": {
+      "title": "The Future We’re Building ",
+      "subtitle": "TOGETHER",
+      "title2": "IDEATION",
+      "desc1": "We brainstorm and research to shape your bold ideas into actionable concepts.",
+      "title3": "WIREFRAME",
+      "desc2": "Turning ideas into wireframes and high-fidelity designs using Figma.",
+      "title4": "DEVELOPMENT",
+      "desc3": "We code and integrate your product using scalable technologies.",
+      "title5": "TESTING/QA",
+      "desc4": "Each line of code is tested for quality, security and performance."
+    },
+    "section3": {
+      "title": "Projects That Define the",
+      "subtitle": "FUTURE"
+    },
+    "section4": {
+      "title": "Contact",
+      "sub": "Us",
+      "form": {
+        "name": "First Name",
+        "surname": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Submit"
       },
-      "section2": {
-        "title": "The Future We’re Building ",
-        "subtitle": "TOGETHER",
-        "title2": "IDEATION",
-        "desc1": "We brainstorm and research to shape your bold ideas into actionable concepts.",
-        "title3": "WIREFRAME",
-        "desc2": "Turning ideas into wireframes and high-fidelity designs using Figma.",
-        "title4": "DEVELOPMENT",
-        "desc3": "We code and integrate your product using scalable technologies.",
-        "title5": "TESTING/QA",
-        "desc4": "Each line of code is tested for quality, security and performance."
-        
-      },
-      "section3": {
-        "title": "Projects That Define the",
-        "subtitle": "FUTURE"
-
-      }
+      "touch": "Get in Touch",
+      "eht": "Why We Built Event Horizon Tech",
+      "descr": "We’re a team of engineers, dreamers, and startup veterans who believe in breaking barriers. Event Horizon Tech was born from a shared passion for empowering creators. Whether you’re looking to collaborate or just say hello, we’d love to hear from you."
     }
+  },
+  "Footer": {
+    "title": "Event Horizon Tech",
+    "descr": "turning bold ideas scalable realities",
+    "sub": "beyond the horizon",
+    "navigation": {
+      "home": "Home",
+      "roadmap": "Road map",
+      "project": "Project",
+      "contact": "Contact"
+    },
+    "vision": "Vision",
+    "abouts": "We’re a team of engineers, dreamers, and startup veterans who believe in breaking boundaries. If you’re looking to collaborate or just say hello,",
+    "about": "We’re a team of engineers, dreamers, and startup veterans",
+    "about2": "who believe in breaking boundaries.",
+    "about3": "If you’re looking to collaborate or just say hello,",
+    "update": "Stay Updated",
+    "subscribe": "Subscribe",
+    "touch": "Get in Touch"
   }
+}
